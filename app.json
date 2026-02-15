@@ -1,29 +1,56 @@
 {
   "expo": {
-    "name": "ithelsy-v2",
-    "slug": "ithelsy-v2",
-    "version": "1.0.0",
+    "name": "IThelsy",
+    "slug": "ithelsy",
+    "scheme": "ithelsy",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#10B981"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ithelsy.app",
+      "buildNumber": "3",
+      "infoPlist": {
+        "NSCameraUsageDescription": "IThelsy a besoin d'accéder à la caméra pour scanner les codes-barres et prendre des photos de repas.",
+        "NSPhotoLibraryUsageDescription": "IThelsy a besoin d'accéder à vos photos pour analyser vos repas.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#10B981"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.ithelsy.app",
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1",
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b082333a-cf9a-4b21-afb3-8183a520acd0"
+      }
     }
   }
 }
